@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Fitness | The Ultimate Standard</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons via Unpkg -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#0a0a0a',
+                            dark: '#141414',
+                            red: '#ff3333',
+                            white: '#f5f5f5',
+                            card: '#111111',
+                            border: '#222222',
+                            gold: '#ffd166',
+                        }
+                    },
+                    fontFamily: {
+                        bebas: ['"Bebas Neue"', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-brand-black text-brand-white font-inter overflow-x-hidden antialiased">
+
+    <!-- Header / Nav -->
+    <header class="fixed top-0 w-full z-50 bg-brand-black/90 backdrop-blur-md border-b border-brand-border transition-all duration-300" id="header">
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl h-20 flex items-center justify-between">
+            <a href="#home" class="flex items-center gap-2">
+                <i data-lucide="dumbbell" class="w-8 h-8 text-brand-red"></i>
+                <span class="font-bebas text-2xl tracking-widest text-brand-white">PRIME FITNESS</span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#home" class="font-poppins text-sm text-brand-white hover:text-brand-gold transition-colors">Home</a>
+                <a href="#about" class="font-poppins text-sm text-brand-white hover:text-brand-gold transition-colors">About</a>
+                <a href="#facilities" class="font-poppins text-sm text-brand-white hover:text-brand-gold transition-colors">Facilities</a>
+                <a href="#trainers" class="font-poppins text-sm text-brand-white hover:text-brand-gold transition-colors">Trainers</a>
+                <a href="#tools" class="font-poppins text-sm text-brand-white hover:text-brand-gold transition-colors">Tools</a>
+                <a href="#pricing" class="font-poppins text-sm text-brand-white hover:text-brand-gold transition-colors">Pricing</a>
+                <a href="#contact" class="font-poppins text-sm text-brand-white hover:text-brand-gold transition-colors">Contact</a>
+                <a href="#pricing" class="bg-brand-red text-white px-6 py-2 rounded-lg font-poppins font-semibold hover:bg-red-600 transition-colors">Join Now</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-brand-white" id="mobile-menu-btn">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav -->
+        <nav class="md:hidden absolute top-full left-0 w-full bg-brand-dark border-b border-brand-border flex-col p-4 gap-4 hidden transition-all duration-300 origin-top" id="mobile-menu">
+            <a href="#home" class="mobile-link font-poppins text-sm text-brand-white p-2 hover:text-brand-gold transition-colors block">Home</a>
+            <a href="#about" class="mobile-link font-poppins text-sm text-brand-white p-2 hover:text-brand-gold transition-colors block">About</a>
+            <a href="#facilities" class="mobile-link font-poppins text-sm text-brand-white p-2 hover:text-brand-gold transition-colors block">Facilities</a>
+            <a href="#trainers" class="mobile-link font-poppins text-sm text-brand-white p-2 hover:text-brand-gold transition-colors block">Trainers</a>
+            <a href="#tools" class="mobile-link font-poppins text-sm text-brand-white p-2 hover:text-brand-gold transition-colors block">Tools</a>
+            <a href="#pricing" class="mobile-link font-poppins text-sm text-brand-white p-2 hover:text-brand-gold transition-colors block">Pricing</a>
+            <a href="#contact" class="mobile-link font-poppins text-sm text-brand-white p-2 hover:text-brand-gold transition-colors block">Contact</a>
+            <a href="#pricing" class="mobile-link bg-brand-red text-white px-6 py-2 rounded-lg font-poppins font-semibold hover:bg-red-600 transition-colors block text-center mt-2">Join Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative w-full h-screen min-h-[800px] flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0 bg-brand-dark">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-transparent z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-brand-dark/80 z-10"></div>
+            <video autoPlay loop muted playsInline class="w-full h-full object-cover opacity-60 mix-blend-luminosity">
+                <source src="https://videos.pexels.com/video-files/3133649/3133649-hd_1920_1080_25fps.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="container relative z-20 mx-auto px-4 sm:px-6 md:px-8 max-w-7xl flex flex-col items-start justify-center h-full reveal-up">
+            <span class="text-brand-red font-poppins font-bold uppercase tracking-[0.2em] mb-4 block">Dominate Your Limits</span>
+            <h1 class="text-5xl sm:text-6xl md:text-8xl lg:text-[9rem] leading-[1] md:leading-[0.85] text-brand-white mb-6">
+                BUILD YOUR <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-red">DREAM PHYSIQUE</span>
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl text-gray-400 font-inter max-w-2xl mb-8 md:mb-10">
+                Join the most elite fitness community. World-class trainers, premium equipment, and a culture of relentless progress.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <a href="#pricing" class="w-full sm:w-auto text-center bg-brand-red text-white px-8 py-3 lg:px-10 lg:py-4 rounded-lg font-poppins font-semibold hover:bg-red-600 transition-colors">Join Now</a>
+                <a href="#transformations" class="w-full sm:w-auto text-center border border-brand-border bg-brand-dark/50 hover:bg-brand-dark text-white px-8 py-3 lg:px-10 lg:py-4 rounded-lg font-poppins font-semibold transition-colors flex justify-center items-center gap-2">
+                    <i data-lucide="play" class="w-5 h-5 fill-current"></i> Watch Transformation
+                </a>
+            </div>
+
+            <!-- Floating Stats -->
+            <div class="absolute bottom-10 left-4 md:left-8 hidden md:flex gap-12">
+                <div class="flex flex-col">
+                    <span class="font-bebas text-4xl text-brand-white">5000+</span>
+                    <span class="font-poppins text-sm text-brand-red uppercase tracking-wider">Active Members</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bebas text-4xl text-brand-white">50+</span>
+                    <span class="font-poppins text-sm text-brand-red uppercase tracking-wider">Expert Coaches</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bebas text-4xl text-brand-white">10+</span>
+                    <span class="font-poppins text-sm text-brand-red uppercase tracking-wider">Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="about" class="py-16 md:py-24 bg-brand-black w-full reveal-up">
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+            <div class="mb-12 md:mb-16 text-center">
+                <span class="text-brand-red font-poppins font-semibold uppercase tracking-widest text-sm md:text-base mb-4 block">The Ultimate Standard</span>
+                <h2 class="text-4xl md:text-5xl lg:text-7xl text-brand-white font-bebas tracking-wide">Why Choose Us</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-brand-card border border-brand-border p-8 rounded-2xl flex flex-col items-start gap-4 group hover:border-brand-red transition-colors duration-300 md:col-span-2">
+                    <div class="p-4 bg-brand-dark rounded-xl group-hover:bg-brand-red/10 group-hover:text-brand-red text-brand-white transition-colors duration-300">
+                        <i data-lucide="dumbbell" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bebas tracking-wide text-brand-white">Premium Equipment</h3>
+                    <p class="text-gray-400 font-inter leading-relaxed">State-of-the-art machines from Rogue and Eleiko to maximize your gains.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-brand-card border border-brand-border p-8 rounded-2xl flex flex-col items-start gap-4 group hover:border-brand-red transition-colors duration-300 md:col-span-1">
+                    <div class="p-4 bg-brand-dark rounded-xl group-hover:bg-brand-red/10 group-hover:text-brand-red text-brand-white transition-colors duration-300">
+                        <i data-lucide="users" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bebas tracking-wide text-brand-white">Elite Trainers</h3>
+                    <p class="text-gray-400 font-inter leading-relaxed">Certified professionals dedicated to pushing you beyond your perceived limits.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-brand-card border border-brand-border p-8 rounded-2xl flex flex-col items-start gap-4 group hover:border-brand-red transition-colors duration-300 md:col-span-1">
+                    <div class="p-4 bg-brand-dark rounded-xl group-hover:bg-brand-red/10 group-hover:text-brand-red text-brand-white transition-colors duration-300">
+                        <i data-lucide="clock" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bebas tracking-wide text-brand-white">24/7 Access</h3>
+                    <p class="text-gray-400 font-inter leading-relaxed">Train on your schedule. We are open every hour of the day, 365 days a year.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-brand-card border border-brand-border p-8 rounded-2xl flex flex-col items-start gap-4 group hover:border-brand-red transition-colors duration-300 md:col-span-2">
+                    <div class="p-4 bg-brand-dark rounded-xl group-hover:bg-brand-red/10 group-hover:text-brand-red text-brand-white transition-colors duration-300">
+                        <i data-lucide="shield-check" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bebas tracking-wide text-brand-white">Safe Environment</h3>
+                    <p class="text-gray-400 font-inter leading-relaxed">Immaculate hygiene, secure lockers, and a supportive, respectful community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformations Section -->
+    <section id="transformations" class="py-16 md:py-24 bg-brand-dark w-full reveal-up">
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+            <div class="mb-12 md:mb-16 text-center">
+                <span class="text-brand-red font-poppins font-semibold uppercase tracking-widest text-sm md:text-base mb-4 block">Results speak</span>
+                <h2 class="text-4xl md:text-5xl lg:text-7xl text-brand-white font-bebas tracking-wide">Real Transformations</h2>
+            </div>
+
+            <div class="max-w-4xl mx-auto relative rounded-3xl overflow-hidden aspect-video border border-brand-border" id="slider-container">
+                <!-- After Image (Background) -->
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop');">
+                    <div class="absolute top-4 right-4 bg-brand-red text-white px-4 py-1 font-bebas text-2xl tracking-widest rounded-md shadow-xl z-20">AFTER</div>
+                </div>
+                
+                <!-- Before Image (Foreground, clipped) -->
+                <div id="before-image" class="absolute inset-0 bg-cover bg-center border-r-[4px] border-brand-gold z-10" style="background-image: url('https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=2069&auto=format&fit=crop'); clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                    <div class="absolute top-4 left-4 bg-brand-dark text-white px-4 py-1 font-bebas text-2xl tracking-widest rounded-md shadow-xl">BEFORE</div>
+                </div>
+
+                <!-- Range Input for Control -->
+                <input type="range" min="0" max="100" value="50" id="slider-input" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30">
+                
+                <!-- Custom Slider Handle -->
+                <div id="slider-handle" class="absolute top-0 bottom-0 w-1 bg-brand-gold pointer-events-none z-20" style="left: 50%;">
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-brand-gold rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,209,102,0.5)]">
+                        <div class="flex gap-1">
+                            <div class="w-0.5 h-5 bg-brand-dark rounded-full"></div>
+                            <div class="w-0.5 h-5 bg-brand-dark rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="py-16 md:py-24 bg-brand-black w-full reveal-up">
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+            <div class="mb-12 md:mb-16 text-center">
+                <span class="text-brand-red font-poppins font-semibold uppercase tracking-widest text-sm md:text-base mb-4 block">Unmatched Excellence</span>
+                <h2 class="text-4xl md:text-5xl lg:text-7xl text-brand-white font-bebas tracking-wide">World-Class Facilities</h2>
+            </div>
+            
+            <div class="space-y-24">
+                <!-- Strength Zone -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center slide-in-left">
+                    <div class="space-y-6">
+                        <h3 class="text-4xl font-bebas text-brand-gold tracking-wide">The Strength Zone</h3>
+                        <p class="text-gray-300 font-inter text-lg leading-relaxed italic">
+                            "Strength does not come from winning. Your struggles develop your strengths."
+                        </p>
+                        <p class="text-gray-400 font-inter text-sm leading-relaxed border-l-2 border-brand-red pl-4">
+                            Equipped with over 8 Olympic lifting platforms, dumbbells up to 150 lbs, and state-of-the-art plate-loaded machines. Our strength zone is engineered for serious lifters pushing their absolute limits.
+                        </p>
+                        <ul class="space-y-3 mt-4 text-gray-300 font-inter text-sm">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-brand-red"></i> Elite Calibrated Powerlifting Plates</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-brand-red"></i> Competition Combo Racks</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-brand-red"></i> 10+ Custom Squat & Deadlift Stations</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-brand-red"></i> Specialty Bars (SSB, Hex, Swiss, Buffalo)</li>
+                        </ul>
+                    </div>
+                    <div class="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=2070&auto=format&fit=crop" alt="Strength Zone" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/80 to-transparent"></div>
+                    </div>
+                </div>
+
+                <!-- Cardio Arena -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center slide-in-right">
+                    <div class="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl order-2 lg:order-1">
+                        <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=1887&auto=format&fit=crop" alt="Cardio Arena" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/80 to-transparent"></div>
+                    </div>
+                    <div class="space-y-6 order-1 lg:order-2">
+                        <h3 class="text-4xl font-bebas text-brand-gold tracking-wide">The Cardio Arena</h3>
+                        <p class="text-gray-300 font-inter text-lg leading-relaxed italic">
+                            "It never gets easier, you just get faster."
+                        </p>
+                        <p class="text-gray-400 font-inter text-sm leading-relaxed border-l-2 border-blue-500 pl-4">
+                            Over 50 high-tech treadmills, Concept2 rowers, and a dedicated sprint track. Tap into the ultimate endurance experience with built-in streaming and live heart-rate monitoring integrations.
+                        </p>
+                        <ul class="space-y-3 mt-4 text-gray-300 font-inter text-sm">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-blue-500"></i> Curved Manual Treadmills</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-blue-500"></i> Assault AirBikes & Concept 2 SkiErgs</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-blue-500"></i> Indoor Sprint/Prowler Track</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-blue-500"></i> StairMaster HIIT Consoles</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Recovery Area -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center slide-in-left">
+                    <div class="space-y-6">
+                        <h3 class="text-4xl font-bebas text-brand-gold tracking-wide">The Recovery Area</h3>
+                        <p class="text-gray-300 font-inter text-lg leading-relaxed italic">
+                            "Rest is not idle, is not wasted. Sometimes rest is the most productive thing you can do."
+                        </p>
+                        <p class="text-gray-400 font-inter text-sm leading-relaxed border-l-2 border-green-500 pl-4">
+                            Accelerate your muscle repair with our premium recovery suite. Featuring infrared saunas, cold plunge pools, percussion therapy, and dedicated mobility mats.
+                        </p>
+                        <ul class="space-y-3 mt-4 text-gray-300 font-inter text-sm">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> Infrared Therapy Saunas</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> Ice Bath & Cold Plunge Systems</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> Deep Tissue Massage Guns</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> Normatec Compression Boots</li>
+                        </ul>
+                    </div>
+                    <div class="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop" alt="Recovery Area" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/80 to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section id="trainers" class="py-16 md:py-24 bg-brand-dark w-full overflow-hidden relative">
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+            <!-- Sliding Text Reveal -->
+            <div class="text-center mb-16 space-y-4">
+                <div class="overflow-hidden inline-block text-reveal-container">
+                    <h2 class="text-5xl md:text-7xl font-bebas text-brand-white text-reveal">Meet The Experts</h2>
+                </div>
+                <br/>
+                <div class="overflow-hidden inline-block text-reveal-container">
+                    <p class="text-brand-red font-poppins font-semibold uppercase tracking-widest text-reveal-delay">Learn from the best.</p>
+                </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Trainer 1 -->
+                <div class="group relative h-[450px] rounded-3xl overflow-hidden cursor-pointer card-swoop-1">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop" alt="Alex Vance" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-0 md:grayscale md:group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/20 to-transparent transition-opacity duration-500 opacity-90 group-hover:opacity-70"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-0 md:translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 class="text-3xl font-bebas text-brand-gold md:text-brand-white mb-1 group-hover:text-brand-gold transition-colors">Alex Vance</h3>
+                        <p class="text-gray-300 font-inter text-sm">Head Coach & Strength</p>
+                    </div>
+                </div>
+                <!-- Trainer 2 -->
+                <div class="group relative h-[450px] rounded-3xl overflow-hidden cursor-pointer card-swoop-2">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070&auto=format&fit=crop" alt="Sarah Chen" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-0 md:grayscale md:group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/20 to-transparent transition-opacity duration-500 opacity-90 group-hover:opacity-70"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-0 md:translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 class="text-3xl font-bebas text-brand-gold md:text-brand-white mb-1 group-hover:text-brand-gold transition-colors">Sarah Chen</h3>
+                        <p class="text-gray-300 font-inter text-sm">HIIT & Endurance</p>
+                    </div>
+                </div>
+                <!-- Trainer 3 -->
+                <div class="group relative h-[450px] rounded-3xl overflow-hidden cursor-pointer card-swoop-3">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070&auto=format&fit=crop" alt="Marcus Cole" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-0 md:grayscale md:group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/20 to-transparent transition-opacity duration-500 opacity-90 group-hover:opacity-70"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-0 md:translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 class="text-3xl font-bebas text-brand-gold md:text-brand-white mb-1 group-hover:text-brand-gold transition-colors">Marcus Cole</h3>
+                        <p class="text-gray-300 font-inter text-sm">Mobility & Recovery</p>
+                    </div>
+                </div>
+                <!-- Trainer 4 -->
+                <div class="group relative h-[450px] rounded-3xl overflow-hidden cursor-pointer card-swoop-4">
+                    <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?q=80&w=2070&auto=format&fit=crop" alt="Elena Rostova" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-0 md:grayscale md:group-hover:grayscale-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/20 to-transparent transition-opacity duration-500 opacity-90 group-hover:opacity-70"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-0 md:translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 class="text-3xl font-bebas text-brand-gold md:text-brand-white mb-1 group-hover:text-brand-gold transition-colors">Elena Rostova</h3>
+                        <p class="text-gray-300 font-inter text-sm">Olympic Lifting</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitness Tools Section -->
+    <section id="tools" class="py-16 md:py-24 bg-brand-black w-full reveal-up">
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+            <div class="mb-12 md:mb-16 text-center">
+                <span class="text-brand-red font-poppins font-semibold uppercase tracking-widest text-sm md:text-base mb-4 block">Know Your Numbers</span>
+                <h2 class="text-4xl md:text-5xl lg:text-7xl text-brand-white font-bebas tracking-wide">Fitness Tools</h2>
+            </div>
+            
+            <div class="max-w-2xl mx-auto bg-brand-card rounded-3xl p-6 md:p-10 border border-brand-border">
+                <!-- Tabs -->
+                <div class="flex gap-4 mb-8 bg-brand-black p-2 rounded-xl">
+                    <button id="tab-bmi" class="flex-1 py-3 rounded-lg font-poppins font-semibold text-sm transition-colors bg-brand-red text-white">BMI Calculator</button>
+                    <button id="tab-calories" class="flex-1 py-3 rounded-lg font-poppins font-semibold text-sm transition-colors text-gray-400 hover:text-white">Daily Calories</button>
+                </div>
+
+                <!-- BMI Form -->
+                <form id="form-bmi" class="space-y-6 fade-in active">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-400 font-inter text-sm mb-2">Height (cm)</label>
+                            <input type="number" id="bmi-height" value="175" class="w-full bg-brand-black border border-brand-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-gold">
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 font-inter text-sm mb-2">Weight (kg)</label>
+                            <input type="number" id="bmi-weight" value="75" class="w-full bg-brand-black border border-brand-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-gold">
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-brand-dark hover:bg-[#1a1a1a] border border-brand-border text-white px-8 py-3 rounded-lg font-poppins font-semibold transition-colors">Calculate BMI</button>
+                    <div id="bmi-result-box" class="mt-6 p-4 bg-brand-black border border-brand-gold/30 rounded-lg text-center hidden">
+                        <span class="text-gray-400 font-inter block mb-1">Your BMI is</span>
+                        <span id="bmi-result" class="text-4xl font-bebas text-brand-gold"></span>
+                    </div>
+                </form>
+
+                <!-- Calorie Form -->
+                <form id="form-calories" class="space-y-6 fade-in hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                        <div class="col-span-1 md:col-span-2">
+                            <label class="block text-gray-400 font-inter text-sm mb-2">Height (cm)</label>
+                            <input type="number" id="cal-height" value="175" class="w-full bg-brand-black border border-brand-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red">
+                        </div>
+                        <div class="col-span-1 md:col-span-2">
+                            <label class="block text-gray-400 font-inter text-sm mb-2">Weight (kg)</label>
+                            <input type="number" id="cal-weight" value="75" class="w-full bg-brand-black border border-brand-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red">
+                        </div>
+                        <div class="col-span-1 md:col-span-2">
+                            <label class="block text-gray-400 font-inter text-sm mb-2">Age</label>
+                            <input type="number" id="cal-age" value="25" class="w-full bg-brand-black border border-brand-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red">
+                        </div>
+                        <div class="col-span-1 md:col-span-2">
+                            <label class="block text-gray-400 font-inter text-sm mb-2">Gender</label>
+                            <select id="cal-gender" class="w-full bg-brand-black border border-brand-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red appearance-none">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="col-span-1 md:col-span-4">
+                            <label class="block text-gray-400 font-inter text-sm mb-2">Activity Level</label>
+                            <select id="cal-activity" class="w-full bg-brand-black border border-brand-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red appearance-none">
+                                <option value="1.2">Sedentary (little to no exercise)</option>
+                                <option value="1.375">Lightly active (light exercise 1-3 days/week)</option>
+                                <option value="1.55" selected>Moderately active (moderate exercise 3-5 days/week)</option>
+                                <option value="1.725">Very active (hard exercise 6-7 days/week)</option>
+                                <option value="1.9">Extra active (very hard exercise/physical job)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-brand-red hover:bg-red-600 text-white px-8 py-3 rounded-lg font-poppins font-semibold transition-colors">Calculate Calories</button>
+                    <div id="cal-result-box" class="mt-6 p-4 bg-brand-black border border-brand-red/30 rounded-lg text-center hidden">
+                        <span class="text-gray-400 font-inter block mb-1">Maintenance Calories</span>
+                        <span id="cal-result" class="text-4xl font-bebas text-brand-red"> <span class="text-xl">kcal/day</span></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 md:py-24 bg-brand-dark w-full reveal-up">
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+            <div class="mb-12 md:mb-16 text-center">
+                <span class="text-brand-red font-poppins font-semibold uppercase tracking-widest text-sm md:text-base mb-4 block">Invest In Yourself</span>
+                <h2 class="text-4xl md:text-5xl lg:text-7xl text-brand-white font-bebas tracking-wide">Membership Plans</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+                <!-- Basic -->
+                <div class="relative bg-brand-card border border-brand-border p-8 rounded-3xl flex flex-col h-full hover:border-brand-red transition-colors duration-300">
+                    <div class="mb-8 mt-2">
+                        <h3 class="text-2xl font-bebas tracking-wide text-brand-white mb-2">Basic</h3>
+                        <p class="text-gray-400 font-inter text-sm mb-6 h-10">Perfect for beginners starting their fitness journey.</p>
+                        <div class="flex items-end gap-1">
+                            <span class="text-5xl font-bebas text-brand-white">Rs.2500</span>
+                            <span class="text-gray-400 font-inter mb-1">/mo</span>
+                        </div>
+                    </div>
+                    <ul class="flex-1 space-y-4 mb-8">
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-red shrink-0"></i><span class="text-gray-300 font-inter text-sm">Access to cardio area</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-red shrink-0"></i><span class="text-gray-300 font-inter text-sm">Access to weight room</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-red shrink-0"></i><span class="text-gray-300 font-inter text-sm">Locker room access</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-red shrink-0"></i><span class="text-gray-300 font-inter text-sm">Free initial assessment</span></li>
+                    </ul>
+                    <button class="w-full bg-brand-dark border border-brand-border text-white px-8 py-3 rounded-lg font-poppins font-semibold hover:bg-[#1a1a1a] transition-colors mt-auto">Choose Basic</button>
+                </div>
+                
+                <!-- Pro -->
+                <div class="relative bg-brand-card border border-brand-gold shadow-[0_0_30px_rgba(255,209,102,0.15)] p-8 rounded-3xl flex flex-col h-full md:-mt-8 md:mb-8 md:h-[calc(100%+4rem)] z-10">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-gold to-yellow-600 text-brand-black font-poppins font-bold text-sm px-4 py-1 rounded-full uppercase tracking-widest">Recommended</div>
+                    <div class="mb-8 mt-2">
+                        <h3 class="text-2xl font-bebas tracking-wide text-brand-white mb-2">Pro</h3>
+                        <p class="text-gray-400 font-inter text-sm mb-6 h-10">The ultimate package for serious athletes.</p>
+                        <div class="flex items-end gap-1">
+                            <span class="text-5xl font-bebas text-brand-white">Rs.3500</span>
+                            <span class="text-gray-400 font-inter mb-1">/mo</span>
+                        </div>
+                    </div>
+                    <ul class="flex-1 space-y-4 mb-8">
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-red shrink-0"></i><span class="text-gray-300 font-inter text-sm">24/7 Gym access</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-red shrink-0"></i><span class="text-gray-300 font-inter text-sm">Group classes included</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-red shrink-0"></i><span class="text-gray-300 font-inter text-sm">1 PT session per month</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-red shrink-0"></i><span class="text-gray-300 font-inter text-sm">Nutrition plan access</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-red shrink-0"></i><span class="text-gray-300 font-inter text-sm">Sauna & Recovery area</span></li>
+                    </ul>
+                    <button class="w-full bg-brand-gold text-brand-black px-8 py-3 rounded-lg font-poppins font-semibold hover:bg-yellow-500 transition-colors mt-auto">Choose Pro</button>
+                </div>
+
+                <!-- Elite -->
+                <div class="relative bg-brand-card border border-brand-border p-8 rounded-3xl flex flex-col h-full hover:border-brand-red transition-colors duration-300">
+                    <div class="mb-8 mt-2">
+                        <h3 class="text-2xl font-bebas tracking-wide text-brand-white mb-2">Elite</h3>
+                        <p class="text-gray-400 font-inter text-sm mb-6 h-10">VIP treatment with unrestricted access.</p>
+                        <div class="flex items-end gap-1">
+                            <span class="text-5xl font-bebas text-brand-white">$149</span>
+                            <span class="text-gray-400 font-inter mb-1">/mo</span>
+                        </div>
+                    </div>
+                    <ul class="flex-1 space-y-4 mb-8">
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-red shrink-0"></i><span class="text-gray-300 font-inter text-sm">Everything in Pro</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-red shrink-0"></i><span class="text-gray-300 font-inter text-sm">4 PT sessions per month</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-red shrink-0"></i><span class="text-gray-300 font-inter text-sm">Dedicated locker</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-red shrink-0"></i><span class="text-gray-300 font-inter text-sm">Free pre-workout & shakes</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-red shrink-0"></i><span class="text-gray-300 font-inter text-sm">Guest passes (2/mo)</span></li>
+                    </ul>
+                    <button class="w-full bg-brand-dark border border-brand-border text-white px-8 py-3 rounded-lg font-poppins font-semibold hover:bg-[#1a1a1a] transition-colors mt-auto">Choose Elite</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="py-16 md:py-24 bg-brand-black w-full reveal-up">
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+            <div class="mb-12 md:mb-16 text-center">
+                <span class="text-brand-red font-poppins font-semibold uppercase tracking-widest text-sm md:text-base mb-4 block">Get in touch</span>
+                <h2 class="text-4xl md:text-5xl lg:text-7xl text-brand-white font-bebas tracking-wide">Contact Us</h2>
+            </div>
+
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                <!-- Details -->
+                <div class="space-y-8">
+                    <h2 class="text-4xl font-bebas text-brand-white">Visit The Facility</h2>
+                    <p class="text-gray-400 font-inter">Ready to take the next step? Drop by for a tour or reach out to our team with any questions.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-brand-dark border border-brand-border rounded-xl flex items-center justify-center text-brand-red">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-poppins font-semibold text-white">Location</h4>
+                                <p class="text-gray-400 font-inter text-sm">Commercial Market Rd, Block B, Satellite Town, Rawalpindi, Pakistan</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-brand-dark border border-brand-border rounded-xl flex items-center justify-center text-brand-red">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-poppins font-semibold text-white">Phone</h4>
+                                <p class="text-gray-400 font-inter text-sm">0311 1777773</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-brand-dark border border-brand-border rounded-xl flex items-center justify-center text-brand-red">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-poppins font-semibold text-white">Email</h4>
+                                <p class="text-gray-400 font-inter text-sm">info@theprimefitness.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="bg-brand-card border border-brand-border p-8 rounded-3xl">
+                    <h3 class="text-2xl font-poppins font-bold text-white mb-6">Send a Message</h3>
+                    <form class="space-y-4" onsubmit="event.preventDefault()">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-400 font-inter text-sm mb-2">First Name</label>
+                                <input type="text" class="w-full bg-brand-dark border border-brand-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-gold">
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 font-inter text-sm mb-2">Last Name</label>
+                                <input type="text" class="w-full bg-brand-dark border border-brand-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-gold">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 font-inter text-sm mb-2">Email</label>
+                            <input type="email" class="w-full bg-brand-dark border border-brand-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-gold">
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 font-inter text-sm mb-2">Message</label>
+                            <textarea rows="4" class="w-full bg-brand-dark border border-brand-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-gold"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-red hover:bg-red-600 text-white px-8 py-3 rounded-lg font-poppins font-semibold transition-colors">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="max-w-6xl mx-auto rounded-3xl overflow-hidden border border-brand-border h-[400px] w-full relative">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    title="Location Map"
+                    src="https://maps.google.com/maps?q=Commercial%20Market%20Rd,%20Block%20B,%20Satellite%20Town,%20Rawalpindi,%20Pakistan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    class="border-0 grayscale contrast-125 opacity-90"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-black border-t border-brand-border pt-20 pb-10">
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-2 mb-6 cursor-pointer">
+                    <i data-lucide="dumbbell" class="w-8 h-8 text-brand-red"></i>
+                    <span class="font-bebas text-3xl tracking-widest text-brand-white">PRIME FITNESS</span>
+                </div>
+                <p class="text-gray-400 font-inter max-w-sm mb-8">
+                    The ultimate standard in fitness. World-class facilities, elite trainers, and a community built on relentless progress.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/primefitnesspakistan/" target="_blank" class="w-10 h-10 rounded-full bg-brand-dark border border-brand-border flex items-center justify-center text-gray-400 hover:text-brand-red hover:border-brand-red transition-colors">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.facebook.com/PrimeFitnessPakistan/" target="_blank" class="w-10 h-10 rounded-full bg-brand-dark border border-brand-border flex items-center justify-center text-gray-400 hover:text-brand-red hover:border-brand-red transition-colors">
+                        <i data-lucide="facebook" class="w-5 h-5"></i>
+                    </a>
+                    <a href="http://www.theprimefitness.com/" target="_blank" class="w-10 h-10 rounded-full bg-brand-dark border border-brand-border flex items-center justify-center text-gray-400 hover:text-brand-red hover:border-brand-red transition-colors">
+                        <i data-lucide="globe" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-bebas text-xl text-brand-white mb-6 tracking-wide">Quick Links</h4>
+                <ul class="space-y-4">
+                    <li><a href="#about" class="text-gray-400 hover:text-brand-gold transition-colors font-inter text-sm">About Us</a></li>
+                    <li><a href="#facilities" class="text-gray-400 hover:text-brand-gold transition-colors font-inter text-sm">Facilities</a></li>
+                    <li><a href="#trainers" class="text-gray-400 hover:text-brand-gold transition-colors font-inter text-sm">Trainers</a></li>
+                    <li><a href="#tools" class="text-gray-400 hover:text-brand-gold transition-colors font-inter text-sm">Fitness Tools</a></li>
+                    <li><a href="#pricing" class="text-gray-400 hover:text-brand-gold transition-colors font-inter text-sm">Membership</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bebas text-xl text-brand-white mb-6 tracking-wide">Newsletter</h4>
+                <p class="text-gray-400 font-inter text-sm mb-4">Subscribe for fitness tips and exclusive offers.</p>
+                <form class="flex gap-2" onsubmit="event.preventDefault()">
+                    <input type="email" placeholder="Your email" class="bg-brand-dark border border-brand-border rounded-lg px-4 py-2 text-white text-sm w-full focus:outline-none focus:border-brand-gold">
+                    <button type="submit" class="bg-brand-red text-white px-4 py-2 rounded-lg font-poppins text-sm font-semibold hover:bg-red-600 transition-colors">Join</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-4 md:px-8 max-w-7xl border-t border-brand-border/50 pt-8 flex flex-col md:flex-row items-center justify-between">
+            <p class="text-gray-500 font-inter text-xs mb-4 md:mb-0">
+                © 2026 Prime Fitness. All rights reserved.
+            </p>
+            <div class="flex gap-6">
+                <a href="#" class="text-gray-500 hover:text-white font-inter text-xs transition-colors">Privacy Policy</a>
+                <a href="#" class="text-gray-500 hover:text-white font-inter text-xs transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Files -->
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
