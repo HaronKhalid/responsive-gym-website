@@ -55,14 +55,14 @@
             
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-8">
-                <a href="#home" class="font-poppins text-sm text-brand-white hover:text-brand-gold transition-colors">Home</a>
-                <a href="#about" class="font-poppins text-sm text-brand-white hover:text-brand-gold transition-colors">About</a>
-                <a href="#facilities" class="font-poppins text-sm text-brand-white hover:text-brand-gold transition-colors">Facilities</a>
-                <a href="#trainers" class="font-poppins text-sm text-brand-white hover:text-brand-gold transition-colors">Trainers</a>
-                <a href="#tools" class="font-poppins text-sm text-brand-white hover:text-brand-gold transition-colors">Tools</a>
-                <a href="#pricing" class="font-poppins text-sm text-brand-white hover:text-brand-gold transition-colors">Pricing</a>
-                <a href="#contact" class="font-poppins text-sm text-brand-white hover:text-brand-gold transition-colors">Contact</a>
-                <a href="#pricing" class="bg-brand-red text-white px-6 py-2 rounded-lg font-poppins font-semibold hover:bg-red-600 transition-colors">Join Now</a>
+                <a href="#home" class="font-poppins text-sm text-gray-300 hover:text-brand-white transition-colors">Home</a>
+                <a href="#facilities" class="font-poppins text-sm text-gray-300 hover:text-brand-white transition-colors">Programs</a>
+                <a href="#trainers" class="font-poppins text-sm text-gray-300 hover:text-brand-white transition-colors">Trainers</a>
+                <a href="#pricing" class="font-poppins text-sm text-gray-300 hover:text-brand-white transition-colors">Pricing</a>
+                <a href="#tools" class="font-poppins text-sm text-gray-300 hover:text-brand-white transition-colors">Fitness Tools</a>
+                <a href="#about" class="font-poppins text-sm text-gray-300 hover:text-brand-white transition-colors">About Us</a>
+                <a href="#contact" class="font-poppins text-sm text-gray-300 hover:text-brand-white transition-colors">Contact</a>
+                <a href="#pricing" class="bg-brand-red text-white px-6 py-2 font-poppins font-semibold hover:bg-red-600 transition-colors uppercase tracking-wide text-xs">Join Now</a>
             </nav>
 
             <!-- Mobile Menu Button -->
@@ -127,14 +127,14 @@
     </section>
 
     <!-- Why Us Section -->
-    <section id="about" class="py-16 md:py-24 bg-brand-black w-full reveal-up">
+    <section id="about" class="py-16 md:py-24 bg-brand-black w-full overflow-hidden">
         <div class="container mx-auto px-4 md:px-8 max-w-7xl">
-            <div class="mb-12 md:mb-16 text-center">
+            <div class="mb-12 md:mb-16 text-center reveal-up">
                 <span class="text-brand-red font-poppins font-semibold uppercase tracking-widest text-sm md:text-base mb-4 block">The Ultimate Standard</span>
                 <h2 class="text-4xl md:text-5xl lg:text-7xl text-brand-white font-bebas tracking-wide">Why Choose Us</h2>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal-up" style="transition-delay: 0.2s;">
                 <!-- Feature 1 -->
                 <div class="bg-brand-card border border-brand-border p-8 rounded-2xl flex flex-col items-start gap-4 group hover:border-brand-red transition-colors duration-300 md:col-span-2">
                     <div class="p-4 bg-brand-dark rounded-xl group-hover:bg-brand-red/10 group-hover:text-brand-red text-brand-white transition-colors duration-300">
@@ -172,14 +172,14 @@
     </section>
 
     <!-- Transformations Section -->
-    <section id="transformations" class="py-16 md:py-24 bg-brand-dark w-full reveal-up">
+    <section id="transformations" class="py-16 md:py-24 bg-brand-dark w-full overflow-hidden">
         <div class="container mx-auto px-4 md:px-8 max-w-7xl">
-            <div class="mb-12 md:mb-16 text-center">
+            <div class="mb-12 md:mb-16 text-center reveal-up">
                 <span class="text-brand-red font-poppins font-semibold uppercase tracking-widest text-sm md:text-base mb-4 block">Results speak</span>
                 <h2 class="text-4xl md:text-5xl lg:text-7xl text-brand-white font-bebas tracking-wide">Real Transformations</h2>
             </div>
 
-            <div class="max-w-4xl mx-auto relative rounded-3xl overflow-hidden aspect-video border border-brand-border" id="slider-container">
+            <div class="max-w-4xl mx-auto relative rounded-3xl overflow-hidden aspect-video border border-brand-border reveal-up" id="slider-container" style="transition-delay: 0.2s;">
                 <!-- After Image (Background) -->
                 <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop');">
                     <div class="absolute top-4 right-4 bg-brand-red text-white px-4 py-1 font-bebas text-2xl tracking-widest rounded-md shadow-xl z-20">AFTER</div>
@@ -207,9 +207,9 @@
     </section>
 
     <!-- Facilities Section -->
-    <section id="facilities" class="py-16 md:py-24 bg-brand-black w-full reveal-up">
+    <section id="facilities" class="py-16 md:py-24 bg-brand-black w-full overflow-hidden">
         <div class="container mx-auto px-4 md:px-8 max-w-7xl">
-            <div class="mb-12 md:mb-16 text-center">
+            <div class="mb-12 md:mb-16 text-center reveal-up">
                 <span class="text-brand-red font-poppins font-semibold uppercase tracking-widest text-sm md:text-base mb-4 block">Unmatched Excellence</span>
                 <h2 class="text-4xl md:text-5xl lg:text-7xl text-brand-white font-bebas tracking-wide">World-Class Facilities</h2>
             </div>
@@ -293,16 +293,18 @@
             <!-- Sliding Text Reveal -->
             <div class="text-center mb-16 space-y-4">
                 <div class="overflow-hidden inline-block text-reveal-container">
-                    <h2 class="text-5xl md:text-7xl font-bebas text-brand-white text-reveal">Meet The Experts</h2>
+                    <h2 class="text-4xl md:text-5xl lg:text-7xl text-brand-white font-bebas tracking-wide">Elite Trainers</h2>
+                    <span class="text-brand-red font-poppins font-semibold uppercase tracking-widest text-sm md:text-base mb-4 block">LEARN FROM THE BEST.</span>
                 </div>
-                <br/>
+                
                 <div class="overflow-hidden inline-block text-reveal-container">
-                    <p class="text-brand-red font-poppins font-semibold uppercase tracking-widest text-reveal-delay">Learn from the best.</p>
+                    <p class="text-brand-red font-poppins font-semibold uppercase tracking-widest text-reveal-delay">Learn from the best in the industry.</p>
                 </div>
             </div>
 
             <!-- Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 reveal-up">
+                
                 <!-- Trainer 1 -->
                 <div class="group relative h-[450px] rounded-3xl overflow-hidden cursor-pointer card-swoop-1">
                     <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop" alt="Alex Vance" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-0 md:grayscale md:group-hover:grayscale-0">
@@ -344,14 +346,14 @@
     </section>
 
     <!-- Fitness Tools Section -->
-    <section id="tools" class="py-16 md:py-24 bg-brand-black w-full reveal-up">
+    <section id="tools" class="py-16 md:py-24 bg-brand-black w-full overflow-hidden">
         <div class="container mx-auto px-4 md:px-8 max-w-7xl">
-            <div class="mb-12 md:mb-16 text-center">
+            <div class="mb-12 md:mb-16 text-center reveal-up">
                 <span class="text-brand-red font-poppins font-semibold uppercase tracking-widest text-sm md:text-base mb-4 block">Know Your Numbers</span>
                 <h2 class="text-4xl md:text-5xl lg:text-7xl text-brand-white font-bebas tracking-wide">Fitness Tools</h2>
             </div>
             
-            <div class="max-w-2xl mx-auto bg-brand-card rounded-3xl p-6 md:p-10 border border-brand-border">
+            <div class="max-w-2xl mx-auto bg-brand-card rounded-3xl p-6 md:p-10 border border-brand-border reveal-up" style="transition-delay: 0.2s;">
                 <!-- Tabs -->
                 <div class="flex gap-4 mb-8 bg-brand-black p-2 rounded-xl">
                     <button id="tab-bmi" class="flex-1 py-3 rounded-lg font-poppins font-semibold text-sm transition-colors bg-brand-red text-white">BMI Calculator</button>
@@ -421,14 +423,14 @@
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-16 md:py-24 bg-brand-dark w-full reveal-up">
+    <section id="pricing" class="py-16 md:py-32 bg-brand-dark w-full overflow-hidden">
         <div class="container mx-auto px-4 md:px-8 max-w-7xl">
-            <div class="mb-12 md:mb-16 text-center">
+            <div class="mb-16 md:mb-24 text-center reveal-up">
                 <span class="text-brand-red font-poppins font-semibold uppercase tracking-widest text-sm md:text-base mb-4 block">Invest In Yourself</span>
                 <h2 class="text-4xl md:text-5xl lg:text-7xl text-brand-white font-bebas tracking-wide">Membership Plans</h2>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center reveal-up" style="transition-delay: 0.2s;">
                 <!-- Basic -->
                 <div class="relative bg-brand-card border border-brand-border p-8 rounded-3xl flex flex-col h-full hover:border-brand-red transition-colors duration-300">
                     <div class="mb-8 mt-2">
@@ -493,16 +495,16 @@
     </section>
 
     <!-- Contact & Location Section -->
-    <section id="contact" class="py-16 md:py-24 bg-brand-black w-full reveal-up">
+    <section id="contact" class="py-16 md:py-24 bg-brand-black w-full overflow-hidden">
         <div class="container mx-auto px-4 md:px-8 max-w-7xl">
-            <div class="mb-12 md:mb-16 text-center">
+            <div class="mb-12 md:mb-16 text-center reveal-up">
                 <span class="text-brand-red font-poppins font-semibold uppercase tracking-widest text-sm md:text-base mb-4 block">Get in touch</span>
                 <h2 class="text-4xl md:text-5xl lg:text-7xl text-brand-white font-bebas tracking-wide">Contact Us</h2>
             </div>
 
             <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
                 <!-- Details -->
-                <div class="space-y-8">
+                <div class="space-y-8 slide-in-left">
                     <h2 class="text-4xl font-bebas text-brand-white">Visit The Facility</h2>
                     <p class="text-gray-400 font-inter">Ready to take the next step? Drop by for a tour or reach out to our team with any questions.</p>
                     
@@ -538,7 +540,7 @@
                 </div>
 
                 <!-- Form -->
-                <div class="bg-brand-card border border-brand-border p-8 rounded-3xl">
+                <div class="bg-brand-card border border-brand-border p-8 rounded-3xl slide-in-right">
                     <h3 class="text-2xl font-poppins font-bold text-white mb-6">Send a Message</h3>
                     <form class="space-y-4" onsubmit="event.preventDefault()">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -565,7 +567,7 @@
             </div>
 
             <!-- Map -->
-            <div class="max-w-6xl mx-auto rounded-3xl overflow-hidden border border-brand-border h-[400px] w-full relative">
+            <div class="max-w-6xl mx-auto rounded-3xl overflow-hidden border border-brand-border h-[400px] w-full relative reveal-up">
                 <iframe 
                     width="100%" 
                     height="100%" 
@@ -607,11 +609,13 @@
             <div>
                 <h4 class="font-bebas text-xl text-brand-white mb-6 tracking-wide">Quick Links</h4>
                 <ul class="space-y-4">
-                    <li><a href="#about" class="text-gray-400 hover:text-brand-gold transition-colors font-inter text-sm">About Us</a></li>
-                    <li><a href="#facilities" class="text-gray-400 hover:text-brand-gold transition-colors font-inter text-sm">Facilities</a></li>
-                    <li><a href="#trainers" class="text-gray-400 hover:text-brand-gold transition-colors font-inter text-sm">Trainers</a></li>
-                    <li><a href="#tools" class="text-gray-400 hover:text-brand-gold transition-colors font-inter text-sm">Fitness Tools</a></li>
-                    <li><a href="#pricing" class="text-gray-400 hover:text-brand-gold transition-colors font-inter text-sm">Membership</a></li>
+                    <li><a href="#home" class="text-gray-400 hover:text-brand-white transition-colors font-inter text-sm">Home</a></li>
+                    <li><a href="#facilities" class="text-gray-400 hover:text-brand-white transition-colors font-inter text-sm">Programs</a></li>
+                    <li><a href="#trainers" class="text-gray-400 hover:text-brand-white transition-colors font-inter text-sm">Trainers</a></li>
+                    <li><a href="#pricing" class="text-gray-400 hover:text-brand-white transition-colors font-inter text-sm">Pricing</a></li>
+                    <li><a href="#tools" class="text-gray-400 hover:text-brand-white transition-colors font-inter text-sm">Fitness Tools</a></li>
+                    <li><a href="#about" class="text-gray-400 hover:text-brand-white transition-colors font-inter text-sm">About Us</a></li>
+                    <li><a href="#contact" class="text-gray-400 hover:text-brand-white transition-colors font-inter text-sm">Contact</a></li>
                 </ul>
             </div>
 
